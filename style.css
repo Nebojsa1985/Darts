@@ -78,18 +78,23 @@ select {
 .remove-player:hover {
   color: rgb(231, 150, 150); 
 }
-
-.scoreboard {
-  display: none;
+.remove-move {
+  color: red;
+  cursor: pointer;
+  font-size: small;
+}
+.remove-move:hover {
+  color: rgb(231, 150, 150); 
+}
+.next {
+  color: green;
+  cursor: pointer;
+  font-size: small;
   font-family: 'Press Start 2P', cursive;
-  color: #fff;
 }
-table, th, td {
-  border: 1px solid #fff;
-  border-collapse: collapse;
-  padding: 8px 18px;
+.next:hover {
+  color: greenyellow; 
 }
-
 .gameboard {
   display: none;
   flex-direction: column;
@@ -106,6 +111,31 @@ table, th, td {
   font: 1em sans-serif;
   font-family: 'Press Start 2P', cursive;
 }
+.scoreboard {
+  display: none;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+}
+table, th, td {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  padding: 8px 18px;
+}
+
+.game-container {
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.playerboard {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  margin-top: 50px;
+}
+
+
 
 .container {
   height: 350px;
@@ -136,6 +166,11 @@ span {
   float: inline-end;
   position: absolute;
   float: right;
+}
+.textspan {
+  margin-bottom:150px;
+  align-self: calc(-210px + -150px);
+  color: #fff;
 }
 .centerspan {
   align-self: center;
@@ -249,6 +284,24 @@ span {
   transform: rotate(324deg);
 }
 .container .f5 {
-   background: rgb(245, 248, 240);
+  background: rgb(245, 248, 240);
   transform: rotate(342deg);
+}
+
+
+
+
+.heart {
+  position: fixed;
+  top: -1vh;
+  font-size: 2rem;
+  transform: translateY(0);
+  animation: fall 3s linear forwards;
+  color: rgb(245, 248, 240);
+}
+
+@keyframes fall {
+  to{
+      transform: translateY(105vh);
+  }
 }
